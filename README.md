@@ -18,7 +18,7 @@ Your primary task is to develop a web application featuring a central component 
 
 ## Key Architectural Guidance
 
-**A core requirement is the strategic use of a `WorldDataContext`.** This context should serve as the central intermediary, managing the data flow and state between your chosen data fetching mechanism (e.g., an Apollo Client, if you opt for GraphQL) and your primary data display component (e.g., a CustomDataGrid, if you choose a table-like display). This emphasizes a clean separation of concerns and efficient data management.
+**A core requirement is the strategic use of a `WorldDataContext`.** This context should serve as the central intermediary, managing the data flow and state between the chosen data fetching mechanism (Apollo Client) and your primary data display component (CustomDataGrid). This emphasizes a clean separation of concerns and efficient data management.
 
 ---
 
