@@ -25,8 +25,7 @@ Your primary task is to develop a web application featuring a central component 
 ## Technical & Quality Expectations
 
 - **Testing is Paramount:** **Every component and significant piece of logic should be accompanied by robust tests.** Demonstrate your commitment to code quality and reliability through comprehensive unit, integration, or snapshot tests, as appropriate.
-- **Styling Freedom:** You have **complete freedom in choosing your styling approach and visual aesthetic.** Whether you prefer CSS Modules, styled-components, Tailwind CSS, or a UI library's built-in styling, we encourage you to showcase your creativity and attention to detail to make the application as appealing and user-friendly as possible.
-- **Technology Choice:** You are free to choose your preferred technologies (e.g., React, Vue, Angular for the frontend; a specific state management library; a particular testing framework). We're interested in your ability to make informed decisions and implement solutions effectively.
+- **Styling Freedom:** You have **complete freedom in choosing your styling approach and visual aesthetic.** Whith Modules, we encourage you to showcase your creativity and attention to detail to make the application as appealing and user-friendly as possible.
 
 ---
 
