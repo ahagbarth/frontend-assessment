@@ -1,7 +1,6 @@
 import CustomDataGrid from "@/components/CustomDataGrid";
 import styles from "./page.module.scss";
-import {  Typography } from "@mui/material";
-import ErrorBoundary from "@/components/ErrorBoundary";
+import { Typography } from "@mui/material";
 
 export default function Home() {
   return (
@@ -9,9 +8,7 @@ export default function Home() {
       <Typography variant="h3" textAlign="center" fontWeight={600}>
         World Data
       </Typography>
-      <ErrorBoundary>
-        <CustomDataGrid />
-      </ErrorBoundary>
+      <CustomDataGrid />
     </div>
   );
 }

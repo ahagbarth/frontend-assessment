@@ -11,6 +11,7 @@ const CustomDataGrid = () => {
   const { data, loading, error } = useWorldData();
   const columns = useMemo(() => HEADER_COLUMNS, []);
 
+  // NOTE: with more time i would have created a custom error component same with loading spinner
   if (error) {
     return (
       <div data-testid="error-message">
