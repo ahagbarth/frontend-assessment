@@ -1,5 +1,21 @@
 .gridContainer {
   display: flex;
-  min-height: 300px;
   flex-direction: column;
+  min-height: 300px;
+  max-height: 80vh;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.grid {
+  min-width: 100px;
+}
+
+.loadingSpinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  min-height: 300px;
 }

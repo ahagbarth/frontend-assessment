@@ -1,21 +1,41 @@
 "use client";
 
-import { createContext, useContext } from "react";
+import { useQuery } from "@apollo/client";
+import {  createContext, useContext, useMemo } from "react";
+import type  { PropsWithChildren } from "react";
+import type { WorldDataContextType } from "./types";
+import { GET_COUNTRIES } from "./queries";
+import { DEFAULT_WORLD_DATA } from "./constants";
 
-// Create a simple context with a default value
-const WorldDataContext = createContext<string | undefined>(undefined);
 
-export const WorldDataProvider = ({ children }: { children: React.ReactNode }) => <WorldDataContext.Provider value="Hello from context!">{children}</WorldDataContext.Provider>;
+const WorldDataContext = createContext<WorldDataContextType | undefined>(
+  DEFAULT_WORLD_DATA
+);
+
+export const WorldDataProvider = ({ children }: PropsWithChildren) => {
+  const { data, loading, error } = useQuery(GET_COUNTRIES);
+
+  const result = useMemo(
+    () => ({
+      data: data?.countries ?? [],
+      loading,
+      error,
+    }),
+    [data, loading, error]
+  );
+
+  return (
+    <WorldDataContext.Provider value={result}>
+      {children}
+    </WorldDataContext.Provider>
+  );
+};
 
 export const useWorldData = () => {
-  // Use the Apollo Client to fetch data or perform mutations
-  // This is just a placeholder; you can replace it with your actual Apollo Client instance:
-  // import { useApolloClient } from "@apollo/client";
-  // const client = useApolloClient();
-
   const context = useContext(WorldDataContext);
   if (context === undefined) {
     throw new Error("useWorldData must be used within a WorldDataProvider");
   }
+
   return context;
 };

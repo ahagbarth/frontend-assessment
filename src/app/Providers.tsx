@@ -1,11 +1,18 @@
 "use client";
 
 import { WorldDataProvider } from "@/contexts/WorldDataContext/WorldDataContext";
+import { ApolloProvider } from "@apollo/client";
+import { createApolloClient } from "../../apollo-client";
 
-export default function Providers({ children }: { children: React.ReactNode }) {
+const Providers = ({ children }: { children: React.ReactNode }) => {
+  const apolloClient = createApolloClient();
+
   return (
-    <WorldDataProvider>
-      <body>{children}</body>
-    </WorldDataProvider>
+    <ApolloProvider client={apolloClient}>
+      <WorldDataProvider>{children}</WorldDataProvider>
+    </ApolloProvider>
   );
 }
+
+
+export default  Providers
