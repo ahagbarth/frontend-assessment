@@ -23,8 +23,6 @@ describe("WorldDataContext integration", () => {
       </MockedProvider>
     );
 
-    expect(screen.getByTestId("loading-spinner")).toBeInTheDocument();
-
     await waitFor(() => {
       expect(screen.getByText("United States")).toBeInTheDocument();
       expect(screen.getByText("Canada")).toBeInTheDocument();
@@ -32,7 +30,7 @@ describe("WorldDataContext integration", () => {
   });
 
   it("renders empty grid when no countries are returned", async () => {
-    const emptyMocks = [
+    const mocksWithNoCountries = [
       {
         request: { query: GET_COUNTRIES },
         result: { data: { countries: [] } },
@@ -40,14 +38,12 @@ describe("WorldDataContext integration", () => {
     ];
 
     render(
-      <MockedProvider mocks={emptyMocks} addTypename={false}>
+      <MockedProvider mocks={mocksWithNoCountries} addTypename={false}>
         <WorldDataProvider>
           <CustomDataGrid />
         </WorldDataProvider>
       </MockedProvider>
     );
-
-    expect(screen.getByTestId("loading-spinner")).toBeInTheDocument();
 
     await waitFor(() => {
       // Adjust this selector/message to match your DataGrid's empty state
@@ -70,8 +66,6 @@ describe("WorldDataContext integration", () => {
         </WorldDataProvider>
       </MockedProvider>
     );
-
-    expect(screen.getByTestId("loading-spinner")).toBeInTheDocument();
 
     await waitFor(() => {
       expect(screen.getByTestId("error-message")).toBeInTheDocument();

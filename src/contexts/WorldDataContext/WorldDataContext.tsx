@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@apollo/client";
-import {  createContext, useContext, useMemo } from "react";
+import {  createContext, useContext, useMemo, useState } from "react";
 import type  { PropsWithChildren } from "react";
 import type { WorldDataContextType } from "./types";
 import { GET_COUNTRIES } from "./queries";
@@ -13,15 +13,27 @@ const WorldDataContext = createContext<WorldDataContextType | undefined>(
 );
 
 export const WorldDataProvider = ({ children }: PropsWithChildren) => {
-  const { data, loading, error } = useQuery(GET_COUNTRIES);
+  const [filter, setFilter] = useState<string>("");
+
+const filterVariable = filter
+  ? { name: { regex: filter } }
+  : undefined;
+
+
+
+  const { data, loading, error } = useQuery(GET_COUNTRIES, {
+     variables: { filter: filterVariable },
+  });
 
   const result = useMemo(
     () => ({
       data: data?.countries ?? [],
       loading,
       error,
+      filter,
+      setFilter,
     }),
-    [data, loading, error]
+    [data, loading, error, filter]
   );
 
   return (

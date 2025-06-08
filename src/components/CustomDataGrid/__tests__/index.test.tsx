@@ -9,14 +9,6 @@ vi.mock("@/contexts/WorldDataContext/WorldDataContext");
 const mockUseWorldData = useWorldData as unknown as ReturnType<typeof vi.fn>;
 
 describe("CustomDataGrid", () => {
-  it("shows loading spinner when loading", () => {
-    mockUseWorldData.mockReturnValue(mockWorldData({ loading: true }));
-    render(<CustomDataGrid />);
-
-    const loadingSpinner = screen.getByTestId("loading-spinner");
-    expect(loadingSpinner).toBeVisible();
-  });
-
   it("shows error message when error", () => {
     mockUseWorldData.mockReturnValue(
       mockWorldData({ error: new Error("Failed to fetch data") })

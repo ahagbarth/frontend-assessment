@@ -1,0 +1,20 @@
+.input {
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+
+    &:focus {
+        border-color: #0070f3;
+        box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.15);
+        background: #fff;
+    }
+
+    &::placeholder {
+        color: #aaa;
+        opacity: 1;
+    }
+}

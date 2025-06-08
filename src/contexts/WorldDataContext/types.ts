@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react";
 
 export type Country = {
     code: string;
@@ -12,4 +13,6 @@ export type Country = {
     data: Country[];
     loading: boolean;
     error?: Error;
+    filter?: string;
+    setFilter?: Dispatch<SetStateAction<string>>
   }

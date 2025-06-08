@@ -112,7 +112,7 @@ exports[`WorldDataContext integration > matches snapshot when loaded 1`] = `
                           aria-label="Flag column menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                           data-mui-internal-clone-element="true"
-                          id="«r2c»"
+                          id="«r3f»"
                           tabindex="-1"
                           type="button"
                         >
@@ -212,7 +212,7 @@ exports[`WorldDataContext integration > matches snapshot when loaded 1`] = `
                           aria-label="Name column menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                           data-mui-internal-clone-element="true"
-                          id="«r2i»"
+                          id="«r3l»"
                           tabindex="-1"
                           type="button"
                         >
@@ -312,7 +312,7 @@ exports[`WorldDataContext integration > matches snapshot when loaded 1`] = `
                           aria-label="Capital column menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                           data-mui-internal-clone-element="true"
-                          id="«r2o»"
+                          id="«r3r»"
                           tabindex="-1"
                           type="button"
                         >
@@ -412,7 +412,7 @@ exports[`WorldDataContext integration > matches snapshot when loaded 1`] = `
                           aria-label="Continent column menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                           data-mui-internal-clone-element="true"
-                          id="«r2u»"
+                          id="«r41»"
                           tabindex="-1"
                           type="button"
                         >
@@ -512,7 +512,7 @@ exports[`WorldDataContext integration > matches snapshot when loaded 1`] = `
                           aria-label="Currency column menu"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                           data-mui-internal-clone-element="true"
-                          id="«r34»"
+                          id="«r47»"
                           tabindex="-1"
                           type="button"
                         >
@@ -790,7 +790,7 @@ exports[`WorldDataContext integration > matches snapshot when loaded 1`] = `
               />
               <p
                 class="MuiTablePagination-selectLabel css-s09cke-MuiTablePagination-selectLabel"
-                id="«r27»"
+                id="«r3a»"
               >
                 Rows per page:
               </p>
@@ -800,9 +800,9 @@ exports[`WorldDataContext integration > matches snapshot when loaded 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-labelledby="«r27» «r26»"
+                  aria-labelledby="«r3a» «r39»"
                   class="MuiSelect-select MuiTablePagination-select MuiSelect-standard MuiInputBase-input css-mmygx2-MuiSelect-select-MuiInputBase-input"
-                  id="«r26»"
+                  id="«r39»"
                   role="combobox"
                   tabindex="0"
                 >
